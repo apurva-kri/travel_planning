@@ -17,16 +17,10 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-)
-
-from dotenv import load_dotenv
-
-load_dotenv()
-
 # Use the API key provided via environment variable
 API_KEY = os.environ.get("GEMINI_API_KEY")
 if not API_KEY:
-    raise ValueError("GEMINI_API_KEY environment variable is missing")
+    raise ValueError("GEMINI_API_KEY environment variable is missing. Set it in your terminal before running the server.")
 client = genai.Client(api_key=API_KEY)
 
 class Message(BaseModel):
