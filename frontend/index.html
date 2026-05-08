@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel AI Copilot</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">VOYAGER.AI</a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Copilot</a>
+            <a href="map.html">Explore Map</a>
+            <a href="food.html">Local Food</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="chat-container">
+            <div class="chat-history" id="chat-history">
+                <div class="message model markdown-body">
+                    <p>Hello! I am your AI Travel Copilot. Where are you dreaming of going?</p>
+                </div>
+            </div>
+            <form class="input-area" id="chat-form">
+                <input type="text" id="user-input" placeholder="Type your message here..." required autocomplete="off">
+                <button type="submit">SEND</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/chat.js"></script>
+</body>
+</html>
